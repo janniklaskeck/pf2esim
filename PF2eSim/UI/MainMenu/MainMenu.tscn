@@ -1,0 +1,56 @@
+[gd_scene load_steps=3 format=3 uid="uid://dl8eifukq21i8"]
+
+[ext_resource type="Script" uid="uid://51hkei4mdmtk" path="res://PF2eSim/UI/MainMenu/MainMenuButtons.gd" id="1_iirvh"]
+[ext_resource type="Theme" uid="uid://m4lmogrrj128" path="res://PF2eSim/UI/Themes/Buttons/MainMenuButton.theme" id="2_pj0sf"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_iirvh")
+
+[node name="MainVBox" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -60.5
+offset_top = -46.5
+offset_right = 60.5
+offset_bottom = 46.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TitleLabel" type="Label" parent="MainVBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 100
+text = "PF 2e Simulator"
+horizontal_alignment = 1
+
+[node name="ButtonVBox" type="VBoxContainer" parent="MainVBox"]
+layout_mode = 2
+
+[node name="StartButton" type="Button" parent="MainVBox/ButtonVBox"]
+layout_mode = 2
+theme = ExtResource("2_pj0sf")
+text = "Start"
+
+[node name="LoadGameButton" type="Button" parent="MainVBox/ButtonVBox"]
+layout_mode = 2
+theme = ExtResource("2_pj0sf")
+text = "Load Game"
+
+[node name="SettingsButton" type="Button" parent="MainVBox/ButtonVBox"]
+layout_mode = 2
+theme = ExtResource("2_pj0sf")
+text = "Settings"
+
+[node name="QuitButton" type="Button" parent="MainVBox/ButtonVBox"]
+layout_mode = 2
+theme = ExtResource("2_pj0sf")
+text = "Quit"

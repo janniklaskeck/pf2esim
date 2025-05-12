@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://co1mlmw2n3w8r"]
+
+[ext_resource type="ArrayMesh" uid="uid://cfkuxur1ebtcb" path="res://PF2eSim/Assets/Environment/CutStone/CutStone_Door_Wood.res" id="1_y1c4q"]
+[ext_resource type="ArrayMesh" uid="uid://7p53suniatuj" path="res://PF2eSim/Assets/Environment/CutStone/CutStone_Floor.res" id="2_gnora"]
+[ext_resource type="ArrayMesh" uid="uid://cn32ka2ytr8wl" path="res://PF2eSim/Assets/Environment/CutStone/CutStone_Wall_Low.res" id="3_hoajo"]
+[ext_resource type="ArrayMesh" uid="uid://0dk8h3ab7s68" path="res://PF2eSim/Assets/Environment/CutStone/CutStone_Wall_Low_Corner.res" id="4_pv6pr"]
+
+[node name="MeshLibrary" type="Node3D"]
+
+[node name="CutStoneDoorWood" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_y1c4q")
+
+[node name="CutStoneFloor" type="MeshInstance3D" parent="."]
+mesh = ExtResource("2_gnora")
+
+[node name="CutStoneWallLow" type="MeshInstance3D" parent="."]
+mesh = ExtResource("3_hoajo")
+
+[node name="CutStoneWallLowCorner" type="MeshInstance3D" parent="."]
+mesh = ExtResource("4_pv6pr")

@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://ce54qd1n43hvp"]
+
+[ext_resource type="Script" uid="uid://bl5sny5o4qx4u" path="res://PF2eSim/Camera/GameCameraController.gd" id="1_axxpe"]
+
+[node name="GameCamera" type="Marker3D"]
+script = ExtResource("1_axxpe")
+DefaultMoveSpeed = 25.0
+HeightLimits = Vector2(5, 15)
+
+[node name="SpringArm3D" type="SpringArm3D" parent="."]
+
+[node name="Camera3D" type="Camera3D" parent="SpringArm3D"]
+current = true
