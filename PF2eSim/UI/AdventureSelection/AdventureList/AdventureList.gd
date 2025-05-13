@@ -16,6 +16,7 @@ func _ready() -> void:
 	
 	Statics.AdventuresManager.onAdventureSelected.connect(onAdventureSelected)
 	
+	var foundAdventure = false
 	for adventure in Statics.AdventuresManager.adventureList:
 		var loaded_adventure : AdventureSetup 
 		loaded_adventure = load(adventure.resource_path)
@@ -26,7 +27,10 @@ func _ready() -> void:
 		var newEntry = entry.instantiate()
 		newEntry.setAdventure(loaded_adventure)
 		AdventureSelectionList.add_child(newEntry)
-
+		if not foundAdventure:
+			newEntry.setSelected()
+			foundAdventure = true
+		
 func onAdventureSelected(selectedAdventure : AdventureSetup):
 	if (selectedAdventure):
 		AdventureDescriptionLabel.text = selectedAdventure.adventure_description

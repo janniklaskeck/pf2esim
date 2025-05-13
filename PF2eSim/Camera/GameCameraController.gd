@@ -4,14 +4,12 @@ extends Marker3D
 @export var HeightLimits : Vector2 = Vector2(1.0, 10.0)
 @export var DefaultPitchAngle : float = 70.0
 
-var Camera : Camera3D
-var SpringArm : SpringArm3D
+@onready var Camera : Camera3D = $SpringArm3D/Camera3D
+@onready var SpringArm : SpringArm3D = $SpringArm3D
 
-func _ready() -> void:
-	Camera = get_node("SpringArm3D/Camera3D")
-	SpringArm = get_node("SpringArm3D")
-	
+func _ready() -> void:	
 	position = Vector3.ZERO
+	position.y = 3.0 # todo fix collisions
 	rotation_degrees.x = -DefaultPitchAngle
 	
 	SpringArm.spring_length = lerp(HeightLimits.x, HeightLimits.y, 0.5)

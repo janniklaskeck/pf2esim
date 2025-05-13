@@ -19,3 +19,4 @@ metadata/_editor_floor_ = Vector3(0, 0, 0)
 transform = Transform3D(0.988496, -0.149218, 0.0246878, 0.114826, 0.846637, 0.519635, -0.0984407, -0.510823, 0.854032, 0, 0, 0)
 
 [node name="GameCamera" parent="." instance=ExtResource("3_l1eyb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0)

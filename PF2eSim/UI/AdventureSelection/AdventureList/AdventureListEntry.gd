@@ -11,5 +11,8 @@ func setAdventure(newAdventure : AdventureSetup):
 	adventure = newAdventure
 	adventureButton.text = adventure.adventure_name
 
+func setSelected():
+	adventureButton.pressed.emit()
+
 func onPressed():
 	Statics.AdventuresManager.adventureSelected(adventure)
