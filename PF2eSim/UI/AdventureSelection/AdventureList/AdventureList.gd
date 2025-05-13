@@ -16,7 +16,7 @@ func _ready() -> void:
 	
 	Statics.AdventuresManager.onAdventureSelected.connect(onAdventureSelected)
 	
-	for adventure in Statics.AdventuresManager.adventure_list:
+	for adventure in Statics.AdventuresManager.adventureList:
 		var loaded_adventure : AdventureSetup 
 		loaded_adventure = load(adventure.resource_path)
 		
