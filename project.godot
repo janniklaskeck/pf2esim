@@ -20,9 +20,14 @@ config/icon="res://icon.svg"
 
 Statics="*res://PF2eSim/Core/Statics.tscn"
 
+[editor]
+
+version_control/plugin_name="GitPlugin"
+version_control/autoload_on_startup=true
+
 [editor_plugins]
 
-enabled=PackedStringArray()
+enabled=PackedStringArray("res://addons/kanban_tasks/plugin.cfg")
 
 [input]
 
