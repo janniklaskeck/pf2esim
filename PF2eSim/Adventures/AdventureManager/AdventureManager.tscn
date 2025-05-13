@@ -1,7 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://djm6ytncgn1o3"]
-
-[ext_resource type="Script" uid="uid://cjhps6o64d8u5" path="res://PF2eSim/Adventures/AdventureManager/AdventureManager.gd" id="1_28pg4"]
-
-[node name="AdventureManager" type="Node"]
-script = ExtResource("1_28pg4")
-adventure_list = Array[String](["uid://b7yaqti6j2xtr"])

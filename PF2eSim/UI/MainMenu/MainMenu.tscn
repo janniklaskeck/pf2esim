@@ -1,9 +1,9 @@
 [gd_scene load_steps=3 format=3 uid="uid://dl8eifukq21i8"]
 
-[ext_resource type="Script" uid="uid://51hkei4mdmtk" path="res://PF2eSim/UI/MainMenu/MainMenuButtons.gd" id="1_iirvh"]
+[ext_resource type="Script" uid="uid://51hkei4mdmtk" path="res://PF2eSim/UI/MainMenu/MainMenu.gd" id="1_iirvh"]
 [ext_resource type="Theme" uid="uid://m4lmogrrj128" path="res://PF2eSim/UI/Themes/Buttons/MainMenuButton.theme" id="2_pj0sf"]
 
-[node name="Control" type="Control"]
+[node name="Control" type="Control" node_paths=PackedStringArray("startButton", "loadGameButton", "settingsButton", "quitButton", "titleLabel")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -11,6 +11,11 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_iirvh")
+startButton = NodePath("MainVBox/ButtonVBox/StartButton")
+loadGameButton = NodePath("MainVBox/ButtonVBox/LoadGameButton")
+settingsButton = NodePath("MainVBox/ButtonVBox/SettingsButton")
+quitButton = NodePath("MainVBox/ButtonVBox/QuitButton")
+titleLabel = NodePath("MainVBox/TitleLabel")
 
 [node name="MainVBox" type="VBoxContainer" parent="."]
 layout_mode = 1

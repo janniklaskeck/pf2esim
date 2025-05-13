@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Adventure" load_steps=3 format=3 uid="uid://b7yaqti6j2xtr"]
+
+[ext_resource type="PackedScene" uid="uid://c8dwcyx3gbqdr" path="res://PF2eSim/Adventures/Tutorial/Tutorial.tscn" id="1_2ek6n"]
+[ext_resource type="Script" uid="uid://bmlktte85nime" path="res://PF2eSim/Adventures/AdventureSetup.gd" id="1_yqfn1"]
+
+[resource]
+script = ExtResource("1_yqfn1")
+adventure_name = "Tutorial"
+adventure_description = "Tutorial description"
+adventure_version = "0.1"
+mapAsset = ExtResource("1_2ek6n")

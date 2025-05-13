@@ -1,0 +1,81 @@
+[gd_scene load_steps=5 format=3 uid="uid://0b0ymtpedpvb"]
+
+[ext_resource type="Script" uid="uid://cn3rnqr7pnrpr" path="res://PF2eSim/UI/AdventureSelection/AdventureList/AdventureList.gd" id="1_iiio6"]
+[ext_resource type="Theme" uid="uid://um0y7olyjodn" path="res://PF2eSim/UI/Themes/Label/LabelTitle.theme" id="2_7rkiu"]
+[ext_resource type="PackedScene" uid="uid://xuuqqpabr6w4" path="res://PF2eSim/UI/AdventureSelection/AdventureList/AdventureListEntry.tscn" id="2_gofgb"]
+[ext_resource type="Theme" uid="uid://c65astktefv0n" path="res://PF2eSim/UI/Themes/Buttons/MenuButtonBig.theme" id="3_7rkiu"]
+
+[node name="AdventureList" type="Control" node_paths=PackedStringArray("AdventureSelectionList", "AdventureDescriptionLabel", "CharacterSelectionButton", "BackButton")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_iiio6")
+AdventureListEntry = ExtResource("2_gofgb")
+AdventureSelectionList = NodePath("VFlowContainer/HBoxContainer/ScrollContainer/AdventureList")
+AdventureDescriptionLabel = NodePath("VFlowContainer/HBoxContainer/AdventureDescription")
+CharacterSelectionButton = NodePath("VFlowContainer/ButtonContainer/MarginContainer2/CharacterSelectionButton")
+BackButton = NodePath("VFlowContainer/ButtonContainer/MarginContainer/BackButton")
+
+[node name="VFlowContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="VFlowContainer"]
+layout_mode = 2
+theme = ExtResource("2_7rkiu")
+text = "Adventure Selection"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VFlowContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ScrollContainer" type="ScrollContainer" parent="VFlowContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="AdventureList" type="VBoxContainer" parent="VFlowContainer/HBoxContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="AdventureDescription" type="Label" parent="VFlowContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+
+[node name="ButtonContainer" type="HBoxContainer" parent="VFlowContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="MarginContainer" type="MarginContainer" parent="VFlowContainer/ButtonContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="BackButton" type="Button" parent="VFlowContainer/ButtonContainer/MarginContainer"]
+layout_mode = 2
+theme = ExtResource("3_7rkiu")
+text = "Back"
+
+[node name="MarginContainer2" type="MarginContainer" parent="VFlowContainer/ButtonContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="CharacterSelectionButton" type="Button" parent="VFlowContainer/ButtonContainer/MarginContainer2"]
+layout_mode = 2
+theme = ExtResource("3_7rkiu")
+text = "Character Selection"

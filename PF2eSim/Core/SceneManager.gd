@@ -1,29 +1,31 @@
 extends Node
 
-enum SceneNames {MainMenu, LoadGame, Settings, AdventureSelection, CharacterSelection, Adventure}
+@export var mainMenuScene : PackedScene
+@export var adventureSelectionScene : PackedScene
+@export var characterSelectionScene : PackedScene
+@export var adventureScene : PackedScene
 
-var mainMenuScene = preload("res://PF2eSim/UI/MainMenu/MainMenu.tscn")
-var advScene = preload("res://PF2eSim/UI/AdventureSelection/AdventureSelection.tscn")
-
-var currentScene = null
+var currentScene : PackedScene = null
 
 func _ready() -> void:
 	call_deferred("loadMainMenuScene")
-	ResourceLoader.load_threaded_request("res://PF2eSim/UI/AdventureSelection/AdventureSelection.tscn")
 	
 func loadMainMenuScene() -> void:
-	currentScene = SceneNames.MainMenu
-	get_tree().change_scene_to_file("res://PF2eSim/UI/MainMenu/MainMenu.tscn")
+	ChangeToScene(mainMenuScene)
 
 func loadAdventureSelectionScene() -> void:
-	currentScene = SceneNames.AdventureSelection
-	get_tree().change_scene_to_file("res://PF2eSim/UI/AdventureSelection/AdventureSelection.tscn")
+	ChangeToScene(adventureSelectionScene)
 
 func loadCharacterSelection() -> void:
-	currentScene = SceneNames.CharacterSelection
-	get_tree().change_scene_to_file("res://PF2eSim/UI/CharacterSelection/CharacterSelection.tscn")
+	ChangeToScene(characterSelectionScene)
 
 func startAdventure():
-	currentScene = SceneNames.Adventure
-	get_tree().change_scene_to_file("res://PF2eSim/Game/Scenes/Adventure/Adventure.tscn")
-	return
+	ChangeToScene(adventureScene)
+
+func ChangeToScene(scene : PackedScene) -> bool:
+	if scene == null:
+		return false
+	
+	currentScene = scene
+	get_tree().change_scene_to_file(scene.resource_path)
+	return true

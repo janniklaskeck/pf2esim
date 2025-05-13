@@ -2,7 +2,7 @@ extends Node
 
 func _ready() -> void:
 	
-	var currentAdventure : Adventure = AdventuresManager.currentAdventure
+	var currentAdventure : AdventureSetup = Statics.AdventuresManager.currentAdventure
 	if (currentAdventure == null):
 		print("Loaded adventure scene with invalid selected adventure asset")
 		return

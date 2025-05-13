@@ -18,8 +18,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-SceneManager="*res://PF2eSim/Core/SceneManager.gd"
-AdventuresManager="*res://PF2eSim/Adventures/AdventureManager/AdventureManager.tscn"
+Statics="*res://PF2eSim/Core/Statics.tscn"
 
 [editor_plugins]
 

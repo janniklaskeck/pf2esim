@@ -4,7 +4,7 @@
 [ext_resource type="Theme" uid="uid://um0y7olyjodn" path="res://PF2eSim/UI/Themes/Label/LabelTitle.theme" id="2_a1sqs"]
 [ext_resource type="Theme" uid="uid://c65astktefv0n" path="res://PF2eSim/UI/Themes/Buttons/MenuButtonBig.theme" id="3_a1sqs"]
 
-[node name="Control" type="Control"]
+[node name="Control" type="Control" node_paths=PackedStringArray("startButton", "backButton")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -12,6 +12,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_0jc4h")
+startButton = NodePath("VBoxContainer2/HBoxContainer2/StartButton")
+backButton = NodePath("VBoxContainer2/HBoxContainer2/BackButton")
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="."]
 layout_mode = 1
