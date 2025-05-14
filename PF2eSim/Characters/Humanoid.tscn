@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://wo6w2qt5leh6"]
+
+[ext_resource type="Script" uid="uid://cu0jr5sjmyhit" path="res://PF2eSim/Characters/Humanoid.gd" id="1_l57rv"]
+[ext_resource type="ArrayMesh" uid="uid://7p53suniatuj" path="res://PF2eSim/Assets/Environment/CutStone/CutStone_Floor.res" id="1_nx0qd"]
+[ext_resource type="Shape3D" uid="uid://j650omytx56w" path="res://PF2eSim/Characters/Humanoid_CapsuleShape3D.tres" id="1_yuo88"]
+[ext_resource type="Script" uid="uid://cflpr6a08b2l7" path="res://PF2eSim/Core/EditorUtilities/CharacterHelper.gd" id="2_ikk6q"]
+
+[node name="Humanoid" type="Node3D"]
+script = ExtResource("1_l57rv")
+
+[node name="EditorHelper" type="Node" parent="." node_paths=PackedStringArray("MeshInstance", "StaticBody", "CollisionShape")]
+script = ExtResource("2_ikk6q")
+MeshInstance = NodePath("../MeshInstance3D")
+StaticBody = NodePath("../MeshInstance3D/StaticBody3D")
+CollisionShape = NodePath("../MeshInstance3D/StaticBody3D/CollisionShape3D")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_nx0qd")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
+shape = ExtResource("1_yuo88")

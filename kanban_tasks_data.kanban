@@ -10,7 +10,13 @@
 		{
 			"uuid": "5aa3e5ee-f2e5-4735-be0e-5f706e9b4e50",
 			"title": "Todo",
-			"tasks": []
+			"tasks": [
+				"e9bbac99-6e14-407a-850a-b11dd07229cd",
+				"43e8365e-88a2-4708-80aa-2d850a9ecd72",
+				"1ee2f32d-23b1-47ad-8b0f-d39b82ef9a2c",
+				"36608e4f-c12a-4dc1-94cd-93aaabce3d62",
+				"feab22f2-c3e1-419c-82f2-60ab3bee02b0"
+			]
 		},
 		{
 			"uuid": "cb92d029-bca2-4e3b-b758-a3e36dea085e",
@@ -23,7 +29,56 @@
 			"tasks": []
 		}
 	],
-	"tasks": [],
+	"tasks": [
+		{
+			"uuid": "e9bbac99-6e14-407a-850a-b11dd07229cd",
+			"title": "Proper Camera collision handling",
+			"description": "",
+			"category": "537b13e9-c9bb-4764-b4f9-ec3b9c36e3b7",
+			"steps": []
+		},
+		{
+			"uuid": "43e8365e-88a2-4708-80aa-2d850a9ecd72",
+			"title": "Create basic character scene",
+			"description": "",
+			"category": "537b13e9-c9bb-4764-b4f9-ec3b9c36e3b7",
+			"steps": []
+		},
+		{
+			"uuid": "1ee2f32d-23b1-47ad-8b0f-d39b82ef9a2c",
+			"title": "Create Game Modes",
+			"description": "",
+			"category": "537b13e9-c9bb-4764-b4f9-ec3b9c36e3b7",
+			"steps": [
+				{
+					"details": "Exploration",
+					"done": false
+				},
+				{
+					"details": "Travel",
+					"done": false
+				},
+				{
+					"details": "Combat",
+					"done": false
+				}
+			]
+		},
+		{
+			"uuid": "36608e4f-c12a-4dc1-94cd-93aaabce3d62",
+			"title": "Create Turn Manager",
+			"description": "",
+			"category": "537b13e9-c9bb-4764-b4f9-ec3b9c36e3b7",
+			"steps": []
+		},
+		{
+			"uuid": "feab22f2-c3e1-419c-82f2-60ab3bee02b0",
+			"title": "Figure out gridmap handling for larger tiles",
+			"description": "",
+			"category": "537b13e9-c9bb-4764-b4f9-ec3b9c36e3b7",
+			"steps": []
+		}
+	],
 	"layout": {
 		"columns": [
 			[
