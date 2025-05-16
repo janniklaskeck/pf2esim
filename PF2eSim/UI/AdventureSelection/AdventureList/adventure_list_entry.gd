@@ -15,4 +15,4 @@ func setSelected():
 	adventureButton.pressed.emit()
 
 func onPressed():
-	Statics.AdventuresManager.adventureSelected(adventure)
+	AdventureManager.adventureSelected(adventure)

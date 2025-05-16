@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://jupqp1y2vlq4"]
+
+[ext_resource type="Script" uid="uid://t4l7i54av3xn" path="res://PF2eSim/Adventures/adventure_root.gd" id="1_ihnbp"]
+
+[node name="Node" type="Node"]
+script = ExtResource("1_ihnbp")

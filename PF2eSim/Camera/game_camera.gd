@@ -9,11 +9,7 @@ extends Marker3D
 
 
 func _ready() -> void:
-	position = Vector3.ZERO
-	position.y = 3.0 # todo fix collisions
-	rotation_degrees.x = -DefaultPitchAngle
-
-	SpringArm.spring_length = lerp(HeightLimits.x, HeightLimits.y, 0.5)
+	initCameraTransform()
 
 
 func _physics_process(delta: float) -> void:
@@ -35,6 +31,16 @@ func _physics_process(delta: float) -> void:
 		ZoomInput += 1
 
 	MoveCamera(delta, MoveInput.normalized(), ZoomInput)
+
+
+func initCameraTransform():
+	var currentLevel = AdventureManager.currentAdventureSceneNode as AdventureLevel
+	position = currentLevel.StartingLocation.position
+
+	position.y = 3.0 # todo fix collisions
+	rotation_degrees.x = -DefaultPitchAngle
+
+	SpringArm.spring_length = lerp(HeightLimits.x, HeightLimits.y, 0.5)
 
 
 func MoveCamera(delta: float, MoveInput: Vector3, ZoomInput: int):

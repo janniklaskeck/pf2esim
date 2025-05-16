@@ -1,0 +1,9 @@
+[gd_scene load_steps=4 format=3 uid="uid://bwujw6uovrajf"]
+
+[ext_resource type="Script" uid="uid://cjhps6o64d8u5" path="res://PF2eSim/Core/adventure_manager.gd" id="1_rgk74"]
+[ext_resource type="Script" uid="uid://bmlktte85nime" path="res://PF2eSim/Adventures/adventure_setup.gd" id="2_285m2"]
+[ext_resource type="Resource" uid="uid://b7yaqti6j2xtr" path="res://PF2eSim/Adventures/Tutorial/tutorial_adventure_setup.tres" id="3_ussm6"]
+
+[node name="AdventureManager" type="Node"]
+script = ExtResource("1_rgk74")
+adventureList = Array[ExtResource("2_285m2")]([ExtResource("3_ussm6")])

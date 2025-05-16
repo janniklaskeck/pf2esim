@@ -1,0 +1,14 @@
+[gd_scene load_steps=6 format=3 uid="uid://wbieleknacx"]
+
+[ext_resource type="Script" uid="uid://b1lwcuflhyf03" path="res://PF2eSim/Core/scene_manager.gd" id="1_lxa8v"]
+[ext_resource type="PackedScene" uid="uid://dl8eifukq21i8" path="res://PF2eSim/UI/MainMenu/main_menu.tscn" id="2_7ark4"]
+[ext_resource type="PackedScene" uid="uid://ffosk3jfw71a" path="res://PF2eSim/UI/AdventureSelection/adventure_selection.tscn" id="3_03wir"]
+[ext_resource type="PackedScene" uid="uid://by8koirpols40" path="res://PF2eSim/UI/CharacterSelection/character_selection.tscn" id="4_j2m4u"]
+[ext_resource type="PackedScene" uid="uid://jupqp1y2vlq4" path="res://PF2eSim/Adventures/adventure_root.tscn" id="5_sonea"]
+
+[node name="SceneManager" type="Node"]
+script = ExtResource("1_lxa8v")
+mainMenuScene = ExtResource("2_7ark4")
+adventureSelectionScene = ExtResource("3_03wir")
+characterSelectionScene = ExtResource("4_j2m4u")
+adventureScene = ExtResource("5_sonea")

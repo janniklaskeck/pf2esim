@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dyhiakul5hw5o"]
+
+[ext_resource type="Script" uid="uid://bkl00r4x7h2la" path="res://PF2eSim/Core/signal_bus.gd" id="1_xt7e1"]
+
+[node name="SignalBus" type="Node"]
+script = ExtResource("1_xt7e1")

@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://ce54qd1n43hvp"]
 
-[ext_resource type="Script" uid="uid://bl5sny5o4qx4u" path="res://PF2eSim/Camera/GameCameraController.gd" id="1_axxpe"]
+[ext_resource type="Script" uid="uid://bl5sny5o4qx4u" path="res://PF2eSim/Camera/game_camera.gd" id="1_axxpe"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_aqg2f"]
 radius = 1.0

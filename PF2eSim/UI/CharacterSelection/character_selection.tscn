@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://by8koirpols40"]
 
-[ext_resource type="Script" uid="uid://b5rp8kxeft1jr" path="res://PF2eSim/UI/CharacterSelection/CharacterSelection.gd" id="1_0jc4h"]
+[ext_resource type="Script" uid="uid://b5rp8kxeft1jr" path="res://PF2eSim/UI/CharacterSelection/character_selection.gd" id="1_0jc4h"]
 [ext_resource type="Theme" uid="uid://um0y7olyjodn" path="res://PF2eSim/UI/Themes/Label/LabelTitle.theme" id="2_a1sqs"]
 [ext_resource type="Theme" uid="uid://c65astktefv0n" path="res://PF2eSim/UI/Themes/Buttons/MenuButtonBig.theme" id="3_a1sqs"]
 

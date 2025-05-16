@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dl8eifukq21i8"]
 
-[ext_resource type="Script" uid="uid://51hkei4mdmtk" path="res://PF2eSim/UI/MainMenu/MainMenu.gd" id="1_iirvh"]
-[ext_resource type="Theme" uid="uid://m4lmogrrj128" path="res://PF2eSim/UI/Themes/Buttons/MainMenuButton.theme" id="2_pj0sf"]
+[ext_resource type="Script" uid="uid://51hkei4mdmtk" path="res://PF2eSim/UI/MainMenu/main_menu.gd" id="1_xuowe"]
+[ext_resource type="Theme" uid="uid://m4lmogrrj128" path="res://PF2eSim/UI/Themes/Buttons/MainMenuButton.theme" id="2_m4hhh"]
 
 [node name="Control" type="Control" node_paths=PackedStringArray("startButton", "loadGameButton", "settingsButton", "quitButton", "titleLabel")]
 layout_mode = 3
@@ -10,7 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_iirvh")
+script = ExtResource("1_xuowe")
 startButton = NodePath("MainVBox/ButtonVBox/StartButton")
 loadGameButton = NodePath("MainVBox/ButtonVBox/LoadGameButton")
 settingsButton = NodePath("MainVBox/ButtonVBox/SettingsButton")
@@ -42,20 +42,20 @@ layout_mode = 2
 
 [node name="StartButton" type="Button" parent="MainVBox/ButtonVBox"]
 layout_mode = 2
-theme = ExtResource("2_pj0sf")
+theme = ExtResource("2_m4hhh")
 text = "Start"
 
 [node name="LoadGameButton" type="Button" parent="MainVBox/ButtonVBox"]
 layout_mode = 2
-theme = ExtResource("2_pj0sf")
+theme = ExtResource("2_m4hhh")
 text = "Load Game"
 
 [node name="SettingsButton" type="Button" parent="MainVBox/ButtonVBox"]
 layout_mode = 2
-theme = ExtResource("2_pj0sf")
+theme = ExtResource("2_m4hhh")
 text = "Settings"
 
 [node name="QuitButton" type="Button" parent="MainVBox/ButtonVBox"]
 layout_mode = 2
-theme = ExtResource("2_pj0sf")
+theme = ExtResource("2_m4hhh")
 text = "Quit"

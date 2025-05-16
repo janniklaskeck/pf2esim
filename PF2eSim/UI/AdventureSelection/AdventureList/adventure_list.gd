@@ -10,19 +10,19 @@ extends Node
 
 func _ready() -> void:
 	BackButton.pressed.connect(self.backPressed)
-	
+
 	CharacterSelectionButton.pressed.connect(self.characterSelectionPressed)
 	CharacterSelectionButton.disabled = true
-	
-	Statics.AdventuresManager.onAdventureSelected.connect(onAdventureSelected)
-	
+
+	AdventureManager.onAdventureSelected.connect(onAdventureSelected)
+
 	var foundAdventure = false
-	for adventure in Statics.AdventuresManager.adventureList:
-		var loaded_adventure : AdventureSetup 
+	for adventure in AdventureManager.adventureList:
+		var loaded_adventure : AdventureSetup
 		loaded_adventure = load(adventure.resource_path)
-		
+
 		print(loaded_adventure.adventure_name)
-		
+
 		var entry = load(AdventureListEntry.resource_path)
 		var newEntry = entry.instantiate()
 		newEntry.setAdventure(loaded_adventure)
@@ -30,7 +30,7 @@ func _ready() -> void:
 		if not foundAdventure:
 			newEntry.setSelected()
 			foundAdventure = true
-		
+
 func onAdventureSelected(selectedAdventure : AdventureSetup):
 	if (selectedAdventure):
 		AdventureDescriptionLabel.text = selectedAdventure.adventure_description
@@ -39,7 +39,7 @@ func onAdventureSelected(selectedAdventure : AdventureSetup):
 		CharacterSelectionButton.disabled = true
 
 func backPressed():
-	Statics.SceneManager.loadMainMenuScene()
-	
+	SceneManager.loadMainMenuScene()
+
 func characterSelectionPressed():
-	Statics.SceneManager.loadCharacterSelection()
+	SceneManager.loadCharacterSelection()

@@ -11,8 +11,8 @@ func _ready() -> void:
 
 
 func onBackPressed():
-	Statics.SceneManager.loadAdventureSelectionScene()
+	SceneManager.loadAdventureSelectionScene()
 
 
 func onStartPressed():
-	Statics.SceneManager.startAdventure()
+	SceneManager.startAdventure()

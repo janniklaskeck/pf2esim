@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://0b0ymtpedpvb"]
 
-[ext_resource type="Script" uid="uid://cn3rnqr7pnrpr" path="res://PF2eSim/UI/AdventureSelection/AdventureList/AdventureList.gd" id="1_iiio6"]
+[ext_resource type="Script" uid="uid://cn3rnqr7pnrpr" path="res://PF2eSim/UI/AdventureSelection/AdventureList/adventure_list.gd" id="1_iiio6"]
 [ext_resource type="Theme" uid="uid://um0y7olyjodn" path="res://PF2eSim/UI/Themes/Label/LabelTitle.theme" id="2_7rkiu"]
-[ext_resource type="PackedScene" uid="uid://xuuqqpabr6w4" path="res://PF2eSim/UI/AdventureSelection/AdventureList/AdventureListEntry.tscn" id="2_gofgb"]
+[ext_resource type="PackedScene" uid="uid://xuuqqpabr6w4" path="res://PF2eSim/UI/AdventureSelection/AdventureList/adventure_list_entry.tscn" id="2_gofgb"]
 [ext_resource type="Theme" uid="uid://c65astktefv0n" path="res://PF2eSim/UI/Themes/Buttons/MenuButtonBig.theme" id="3_7rkiu"]
 
 [node name="AdventureList" type="Control" node_paths=PackedStringArray("AdventureSelectionList", "AdventureDescriptionLabel", "CharacterSelectionButton", "BackButton")]

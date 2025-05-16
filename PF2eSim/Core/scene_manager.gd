@@ -1,5 +1,5 @@
 extends Node
-class_name SceneManager
+class_name Scene_Manager
 
 @export var mainMenuScene: PackedScene
 @export var adventureSelectionScene: PackedScene
@@ -36,8 +36,3 @@ func ChangeToScene(scene: PackedScene) -> bool:
 	currentScene = scene
 	get_tree().change_scene_to_file(scene.resource_path)
 	return true
-
-
-func addChildScene(newScene: PackedScene):
-	var instance: Node = newScene.instantiate()
-	get_tree().root.add_child(instance)
