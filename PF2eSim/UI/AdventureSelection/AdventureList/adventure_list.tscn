@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://xuuqqpabr6w4" path="res://PF2eSim/UI/AdventureSelection/AdventureList/adventure_list_entry.tscn" id="2_gofgb"]
 [ext_resource type="Theme" uid="uid://c65astktefv0n" path="res://PF2eSim/UI/Themes/Buttons/MenuButtonBig.theme" id="3_7rkiu"]
 
-[node name="AdventureList" type="Control" node_paths=PackedStringArray("AdventureSelectionList", "AdventureDescriptionLabel", "CharacterSelectionButton", "BackButton")]
+[node name="AdventureList" type="Control" node_paths=PackedStringArray("adventureSelectionList", "adventureDescriptionLabel", "characterSelectionButton", "backButton")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -13,11 +13,11 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_iiio6")
-AdventureListEntry = ExtResource("2_gofgb")
-AdventureSelectionList = NodePath("VFlowContainer/HBoxContainer/ScrollContainer/AdventureList")
-AdventureDescriptionLabel = NodePath("VFlowContainer/HBoxContainer/AdventureDescription")
-CharacterSelectionButton = NodePath("VFlowContainer/ButtonContainer/MarginContainer2/CharacterSelectionButton")
-BackButton = NodePath("VFlowContainer/ButtonContainer/MarginContainer/BackButton")
+adventureListEntry = ExtResource("2_gofgb")
+adventureSelectionList = NodePath("VFlowContainer/HBoxContainer/ScrollContainer/AdventureList")
+adventureDescriptionLabel = NodePath("VFlowContainer/HBoxContainer/AdventureDescription")
+characterSelectionButton = NodePath("VFlowContainer/ButtonContainer/MarginContainer2/CharacterSelectionButton")
+backButton = NodePath("VFlowContainer/ButtonContainer/MarginContainer/BackButton")
 
 [node name="VFlowContainer" type="VBoxContainer" parent="."]
 layout_mode = 1

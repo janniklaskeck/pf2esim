@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://gue3sbtc4x2p"]
+
+[ext_resource type="Script" uid="uid://8yp1pdbfdnk8" path="res://PF2eSim/Characters/components/Gameplay/Skills/skill_manager.gd" id="1_gsmnf"]
+
+[node name="SkillManager" type="Node"]
+script = ExtResource("1_gsmnf")
+metadata/_custom_type_script = "uid://n6cw5gdsau08"

@@ -5,9 +5,9 @@
 [ext_resource type="PackedScene" uid="uid://ce54qd1n43hvp" path="res://PF2eSim/Camera/game_camera.tscn" id="3_l1eyb"]
 [ext_resource type="PackedScene" uid="uid://dpcn4a5sen7ai" path="res://PF2eSim/Core/LevelUtilities/starting_location.tscn" id="3_t55ge"]
 
-[node name="Tutorial" type="Node3D" node_paths=PackedStringArray("StartingLocation")]
+[node name="Tutorial" type="Node3D" node_paths=PackedStringArray("startingLocation")]
 script = ExtResource("1_4g85i")
-StartingLocation = NodePath("StartingLocation")
+startingLocation = NodePath("StartingLocation")
 
 [node name="GridMap" type="GridMap" parent="."]
 mesh_library = ExtResource("1_t55ge")

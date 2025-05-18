@@ -1,4 +1,4 @@
-extends Node
 class_name AdventureLevel
+extends Node
 
-@export var StartingLocation : StartingLocation
+@export var startingLocation: StartingLocation

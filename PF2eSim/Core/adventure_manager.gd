@@ -1,5 +1,5 @@
-extends Node
 class_name Adventure_Manager
+extends Node
 
 signal onAdventureSelected(selectedAdventure)
 

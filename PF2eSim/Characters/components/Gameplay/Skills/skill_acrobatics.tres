@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="SkillBase" load_steps=3 format=3 uid="uid://bwm813tta5vt6"]
+
+[ext_resource type="Script" uid="uid://1bmihw02slth" path="res://PF2eSim/Characters/components/Gameplay/Actions/action.gd" id="1_ga1m8"]
+[ext_resource type="Script" uid="uid://beu8e1e3rnq7a" path="res://PF2eSim/Characters/components/Gameplay/Skills/skill_base.gd" id="2_d0u3w"]
+
+[resource]
+script = ExtResource("2_d0u3w")
+Id = 1
+actions = Array[ExtResource("1_ga1m8")]([])
+actionsTrained = Array[ExtResource("1_ga1m8")]([])
+metadata/_custom_type_script = "uid://beu8e1e3rnq7a"

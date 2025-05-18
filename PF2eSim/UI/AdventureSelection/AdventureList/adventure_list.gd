@@ -1,45 +1,49 @@
 extends Node
 
-@export var AdventureListEntry : PackedScene
+@export var adventureListEntry: PackedScene
 
-@export var AdventureSelectionList : VBoxContainer
-@export var AdventureDescriptionLabel : Label
+@export var adventureSelectionList: VBoxContainer
+@export var adventureDescriptionLabel: Label
 
-@export var CharacterSelectionButton : Button
-@export var BackButton : Button
+@export var characterSelectionButton: Button
+@export var backButton: Button
+
 
 func _ready() -> void:
-	BackButton.pressed.connect(self.backPressed)
+	backButton.pressed.connect(self.backPressed)
 
-	CharacterSelectionButton.pressed.connect(self.characterSelectionPressed)
-	CharacterSelectionButton.disabled = true
+	characterSelectionButton.pressed.connect(self.characterSelectionPressed)
+	characterSelectionButton.disabled = true
 
 	AdventureManager.onAdventureSelected.connect(onAdventureSelected)
 
 	var foundAdventure = false
 	for adventure in AdventureManager.adventureList:
-		var loaded_adventure : AdventureSetup
-		loaded_adventure = load(adventure.resource_path)
+		var loadedAdventure: AdventureSetup
+		loadedAdventure = load(adventure.resource_path)
 
-		print(loaded_adventure.adventure_name)
+		print(loadedAdventure.adventureName)
 
-		var entry = load(AdventureListEntry.resource_path)
+		var entry = load(adventureListEntry.resource_path)
 		var newEntry = entry.instantiate()
-		newEntry.setAdventure(loaded_adventure)
-		AdventureSelectionList.add_child(newEntry)
+		newEntry.setAdventure(loadedAdventure)
+		adventureSelectionList.add_child(newEntry)
 		if not foundAdventure:
 			newEntry.setSelected()
 			foundAdventure = true
 
-func onAdventureSelected(selectedAdventure : AdventureSetup):
-	if (selectedAdventure):
-		AdventureDescriptionLabel.text = selectedAdventure.adventure_description
-		CharacterSelectionButton.disabled = false
+
+func onAdventureSelected(selectedAdventure: AdventureSetup):
+	if selectedAdventure:
+		adventureDescriptionLabel.text = selectedAdventure.adventureDescription
+		characterSelectionButton.disabled = false
 	else:
-		CharacterSelectionButton.disabled = true
+		characterSelectionButton.disabled = true
+
 
 func backPressed():
 	SceneManager.loadMainMenuScene()
+
 
 func characterSelectionPressed():
 	SceneManager.loadCharacterSelection()

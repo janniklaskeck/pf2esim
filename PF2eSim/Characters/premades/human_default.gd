@@ -1,0 +1,2 @@
+class_name human_default
+extends Character

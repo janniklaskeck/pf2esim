@@ -1,6 +1,6 @@
 extends Node
 
-@export var ColorInterval: float = 1.
+@export var colorInterval: float = 1.
 
 @export var startButton: Button
 @export var loadGameButton: Button
@@ -9,8 +9,8 @@ extends Node
 @export var titleLabel: Label
 
 var current_base_color: Color
-var TargetColor: Color
-var TargetColorCounter: float
+var targetColor: Color
+var targetColorCounter: float
 
 var rng: RandomNumberGenerator = RandomNumberGenerator.new()
 
@@ -24,20 +24,20 @@ func _ready() -> void:
 
 	quitButton.pressed.connect(self.quitPressed)
 
-	TargetColor = Color(rng.randf(), rng.randf(), rng.randf())
+	targetColor = Color(rng.randf(), rng.randf(), rng.randf())
 	current_base_color = titleLabel.get_theme_color("font_color")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	var alpha = TargetColorCounter / ColorInterval
-	var NewColor = lerp_colors(current_base_color, TargetColor, alpha)
-	titleLabel.add_theme_color_override("font_color", NewColor)
+	var alpha = targetColorCounter / colorInterval
+	var newColor = lerp_colors(current_base_color, targetColor, alpha)
+	titleLabel.add_theme_color_override("font_color", newColor)
 
-	TargetColorCounter += delta
-	if (TargetColorCounter > ColorInterval):
-		current_base_color = TargetColor
-		TargetColor = Color(rng.randf(), rng.randf(), rng.randf())
-		TargetColorCounter = 0.0
+	targetColorCounter += delta
+	if (targetColorCounter > colorInterval):
+		current_base_color = targetColor
+		targetColor = Color(rng.randf(), rng.randf(), rng.randf())
+		targetColorCounter = 0.0
 
 func startPressed():
 	SceneManager.loadAdventureSelectionScene()

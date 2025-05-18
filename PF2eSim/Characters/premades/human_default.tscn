@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://du3o0pbvrr0dr"]
+
+[ext_resource type="Script" uid="uid://doqvwmvhcaeup" path="res://PF2eSim/Characters/premades/human_default.gd" id="1_kmbo1"]
+[ext_resource type="PackedScene" uid="uid://ppl7xvstr75q" path="res://PF2eSim/Characters/components/Humanoids/humanoid_collision.tscn" id="2_f2v2t"]
+[ext_resource type="PackedScene" uid="uid://wo6w2qt5leh6" path="res://PF2eSim/Characters/components/Humanoids/humanoid_mesh.tscn" id="3_mikvc"]
+
+[node name="HumanDefault" type="Node3D"]
+script = ExtResource("1_kmbo1")
+metadata/_custom_type_script = "uid://dt62313d0u8ae"
+
+[node name="HumanoidCollision" parent="." instance=ExtResource("2_f2v2t")]
+
+[node name="HumanoidMesh" parent="." instance=ExtResource("3_mikvc")]

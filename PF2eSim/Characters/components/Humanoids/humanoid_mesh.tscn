@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://wo6w2qt5leh6"]
+
+[ext_resource type="Script" uid="uid://cu0jr5sjmyhit" path="res://PF2eSim/Characters/components/Humanoids/humanoid_mesh.gd" id="1_fovk4"]
+[ext_resource type="ArrayMesh" uid="uid://byely5kgwk1lo" path="res://PF2eSim/Assets/Characters/character_default_Tsune.res" id="2_qo1fk"]
+
+[node name="Humanoid" type="Node3D"]
+script = ExtResource("1_fovk4")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = ExtResource("2_qo1fk")

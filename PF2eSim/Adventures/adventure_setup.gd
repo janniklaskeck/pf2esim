@@ -1,14 +1,10 @@
-extends Resource
 class_name AdventureSetup
+extends Resource
 
-@export
-var adventure_name : String = ""
+@export var adventureName: String = ""
 
-@export
-var adventure_description : String = ""
+@export var adventureDescription: String = ""
 
-@export
-var adventure_version : String = ""
+@export var adventureVersion: String = ""
 
-@export
-var mapAsset : PackedScene = null
+@export var mapAsset: PackedScene = null

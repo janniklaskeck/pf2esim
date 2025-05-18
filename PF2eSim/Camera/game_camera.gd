@@ -1,11 +1,11 @@
 extends Marker3D
 
-@export var DefaultMoveSpeed: float = 1.0
-@export var HeightLimits: Vector2 = Vector2(1.0, 10.0)
-@export var DefaultPitchAngle: float = 70.0
+@export var defaultMoveSpeed: float = 1.0
+@export var heightLimits: Vector2 = Vector2(1.0, 10.0)
+@export var defaultPitchAngle: float = 70.0
 
-@onready var Camera: Camera3D = $SpringArm3D/Camera3D
-@onready var SpringArm: SpringArm3D = $SpringArm3D
+@onready var camera: Camera3D = $SpringArm3D/Camera3D
+@onready var springArm: SpringArm3D = $SpringArm3D
 
 
 func _ready() -> void:
@@ -13,38 +13,38 @@ func _ready() -> void:
 
 
 func _physics_process(delta: float) -> void:
-	var MoveInput = Vector3.ZERO
+	var moveInput = Vector3.ZERO
 	if Input.is_action_pressed("Camera_Move_Left"):
-		MoveInput.x -= 1
+		moveInput.x -= 1
 	if Input.is_action_pressed("Camera_Move_Right"):
-		MoveInput.x += 1
+		moveInput.x += 1
 
 	if Input.is_action_pressed("Camera_Move_Forward"):
-		MoveInput.z -= 1
+		moveInput.z -= 1
 	if Input.is_action_pressed("Camera_Move_Backward"):
-		MoveInput.z += 1
+		moveInput.z += 1
 
-	var ZoomInput = 0.0
+	var zoomInput = 0.0
 	if Input.is_action_just_pressed("Camera_Move_Zoom_In"):
-		ZoomInput -= 1
+		zoomInput -= 1
 	if Input.is_action_just_pressed("Camera_Move_Zoom_Out"):
-		ZoomInput += 1
+		zoomInput += 1
 
-	MoveCamera(delta, MoveInput.normalized(), ZoomInput)
+	MoveCamera(delta, moveInput.normalized(), zoomInput)
 
 
 func initCameraTransform():
 	var currentLevel = AdventureManager.currentAdventureSceneNode as AdventureLevel
-	position = currentLevel.StartingLocation.position
+	position = currentLevel.startingLocation.position
 
 	position.y = 3.0 # todo fix collisions
-	rotation_degrees.x = -DefaultPitchAngle
+	rotation_degrees.x = -defaultPitchAngle
 
-	SpringArm.spring_length = lerp(HeightLimits.x, HeightLimits.y, 0.5)
+	springArm.spring_length = lerp(heightLimits.x, heightLimits.y, 0.5)
 
 
-func MoveCamera(delta: float, MoveInput: Vector3, ZoomInput: int):
-	self.position += MoveInput * DefaultMoveSpeed * delta
+func MoveCamera(delta: float, moveInput: Vector3, zoomInput: int):
+	self.position += moveInput * defaultMoveSpeed * delta
 
-	var SpringArmMove = ZoomInput * DefaultMoveSpeed * delta
-	SpringArm.spring_length = clampf(SpringArm.spring_length + SpringArmMove, HeightLimits.x, HeightLimits.y)
+	var springArmMove = zoomInput * defaultMoveSpeed * delta
+	springArm.spring_length = clampf(springArm.spring_length + springArmMove, heightLimits.x, heightLimits.y)

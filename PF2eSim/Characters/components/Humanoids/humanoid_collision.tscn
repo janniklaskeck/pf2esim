@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://ppl7xvstr75q"]
+
+[ext_resource type="Script" uid="uid://bpha267salmek" path="res://PF2eSim/Characters/components/Humanoids/humanoid_collision.gd" id="1_jwdlg"]
+[ext_resource type="Shape3D" uid="uid://j650omytx56w" path="res://PF2eSim/Characters/components/Humanoids/humanoid_capsule_shape_3d.tres" id="2_rgbai"]
+[ext_resource type="Script" uid="uid://cflpr6a08b2l7" path="res://PF2eSim/Core/EditorUtilities/collision_shape_utils.gd" id="3_00qr5"]
+
+[node name="HumanoidCollision" type="Node3D"]
+script = ExtResource("1_jwdlg")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = ExtResource("2_rgbai")
+debug_color = Color(0, 0.6, 0.701961, 0.901961)
+script = ExtResource("3_00qr5")

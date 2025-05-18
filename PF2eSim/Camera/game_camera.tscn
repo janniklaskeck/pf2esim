@@ -7,8 +7,8 @@ radius = 1.0
 
 [node name="GameCamera" type="Marker3D"]
 script = ExtResource("1_axxpe")
-DefaultMoveSpeed = 25.0
-HeightLimits = Vector2(5, 15)
+defaultMoveSpeed = 20.0
+heightLimits = Vector2(3, 10)
 
 [node name="SpringArm3D" type="SpringArm3D" parent="."]
 shape = SubResource("SphereShape3D_aqg2f")
