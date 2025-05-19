@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://c8dwcyx3gbqdr"]
+[gd_scene load_steps=7 format=3 uid="uid://c8dwcyx3gbqdr"]
 
 [ext_resource type="Script" uid="uid://tbvl4ecaxoc8" path="res://PF2eSim/Adventures/adventure_level.gd" id="1_4g85i"]
 [ext_resource type="MeshLibrary" uid="uid://brgga2004j7it" path="res://PF2eSim/Assets/MeshLibraries/MainMeshLibrary.tres" id="1_t55ge"]
 [ext_resource type="PackedScene" uid="uid://ce54qd1n43hvp" path="res://PF2eSim/Camera/game_camera.tscn" id="3_l1eyb"]
 [ext_resource type="PackedScene" uid="uid://dpcn4a5sen7ai" path="res://PF2eSim/Core/LevelUtilities/starting_location.tscn" id="3_t55ge"]
 [ext_resource type="PackedScene" uid="uid://du3o0pbvrr0dr" path="res://PF2eSim/Characters/Premades/human_default.tscn" id="5_l1eyb"]
+[ext_resource type="Script" uid="uid://bb11pkjxq1ttf" path="res://PF2eSim/Characters/Components/Navigation/navigation_utils.gd" id="6_i2vte"]
 
 [node name="Tutorial" type="Node3D" node_paths=PackedStringArray("startingLocation")]
 script = ExtResource("1_4g85i")
@@ -30,4 +31,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1, -1)
 
 [node name="HumanDefault" parent="." instance=ExtResource("5_l1eyb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.607173, 0.270337, -0.867076)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.675, 0, 1.525)
+
+[node name="Node" type="Node" parent="HumanDefault"]
+script = ExtResource("6_i2vte")

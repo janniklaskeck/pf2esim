@@ -1,13 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://cyitr1bqh0lnn"]
+[gd_scene load_steps=3 format=3 uid="uid://cyitr1bqh0lnn"]
 
 [ext_resource type="Script" uid="uid://iqmoy5b4os5t" path="res://PF2eSim/Characters/Components/Navigation/navigation_component.gd" id="1_dxm2a"]
-[ext_resource type="Script" uid="uid://bb11pkjxq1ttf" path="res://PF2eSim/Characters/Components/Navigation/navigation_utils.gd" id="2_ters2"]
 [ext_resource type="Resource" uid="uid://ds1rp8tsv1hrv" path="res://PF2eSim/Characters/Components/Navigation/navigation_setup.tres" id="3_4n74t"]
 
 [node name="NavigationComponent" type="Node"]
 script = ExtResource("1_dxm2a")
-navigationSetup = ExtResource("3_4n74t")
-
-[node name="NavigationUtils" type="Node" parent="."]
-script = ExtResource("2_ters2")
 navigationSetup = ExtResource("3_4n74t")
