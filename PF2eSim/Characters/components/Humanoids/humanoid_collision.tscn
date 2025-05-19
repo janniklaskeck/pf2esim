@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://ppl7xvstr75q"]
 
-[ext_resource type="Script" uid="uid://bpha267salmek" path="res://PF2eSim/Characters/components/Humanoids/humanoid_collision.gd" id="1_jwdlg"]
-[ext_resource type="Shape3D" uid="uid://j650omytx56w" path="res://PF2eSim/Characters/components/Humanoids/humanoid_capsule_shape_3d.tres" id="2_rgbai"]
+[ext_resource type="Script" uid="uid://bpha267salmek" path="res://PF2eSim/Characters/Components/Humanoids/humanoid_collision.gd" id="1_jwdlg"]
+[ext_resource type="Shape3D" uid="uid://j650omytx56w" path="res://PF2eSim/Characters/Components/Humanoids/humanoid_capsule_shape_3d.tres" id="2_rgbai"]
 [ext_resource type="Script" uid="uid://cflpr6a08b2l7" path="res://PF2eSim/Core/EditorUtilities/collision_shape_utils.gd" id="3_00qr5"]
 
 [node name="HumanoidCollision" type="Node3D"]
