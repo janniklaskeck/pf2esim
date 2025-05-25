@@ -20,7 +20,8 @@ config/icon="res://icon.svg"
 
 AdventureManager="*res://PF2eSim/Core/adventure_manager.tscn"
 SceneManager="*res://PF2eSim/Core/scene_manager.tscn"
-SignalBus="*res://PF2eSim/Core/signal_bus.tscn"
+NavigationManager="*res://PF2eSim/Core/Navigation/NavigationManager.tscn"
+InputManager="*res://PF2eSim/Core/Input/input_manager.tscn"
 
 [editor]
 
@@ -30,6 +31,12 @@ version_control/autoload_on_startup=true
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/kanban_tasks/plugin.cfg", "res://addons/simple_gdscript_formatter/plugin.cfg")
+
+[global_group]
+
+Camera=""
+Characters=""
+PlayerCharacters=""
 
 [input]
 
@@ -61,5 +68,10 @@ Camera_Move_Zoom_In={
 Camera_Move_Zoom_Out={
 "deadzone": 0.2,
 "events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":0,"position":Vector2(0, 0),"global_position":Vector2(0, 0),"factor":1.0,"button_index":5,"canceled":false,"pressed":false,"double_click":false,"script":null)
+]
+}
+LMB={
+"deadzone": 0.2,
+"events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":1,"position":Vector2(306, 18),"global_position":Vector2(315, 66),"factor":1.0,"button_index":1,"canceled":false,"pressed":true,"double_click":false,"script":null)
 ]
 }

@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://bfilb455y165n"]
+
+[ext_resource type="Script" uid="uid://bgj28je13b5km" path="res://PF2eSim/Characters/components/Gameplay/Movement/movement_component.gd" id="1_o5etc"]
+
+[node name="MovementComponent" type="Node"]
+script = ExtResource("1_o5etc")
+metadata/_custom_type_script = "uid://n6cw5gdsau08"

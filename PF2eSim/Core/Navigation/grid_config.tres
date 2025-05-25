@@ -1,9 +1,11 @@
 [gd_resource type="Resource" script_class="NavigationSetup" load_steps=2 format=3 uid="uid://ds1rp8tsv1hrv"]
 
-[ext_resource type="Script" uid="uid://ck6j7tvw4dahw" path="res://PF2eSim/Characters/Components/Navigation/navigation_setup.gd" id="1_ait56"]
+[ext_resource type="Script" uid="uid://ck6j7tvw4dahw" path="res://PF2eSim/Core/Navigation/grid_config.gd" id="1_ait56"]
 
 [resource]
 script = ExtResource("1_ait56")
 enableDebug = true
 gridSize = 1.525
+groundHeight = 0.5
+floorHeight = 5.0
 metadata/_custom_type_script = "uid://ck6j7tvw4dahw"

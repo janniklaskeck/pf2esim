@@ -7,12 +7,15 @@ enum GridSize {
 	Three,
 }
 
+@export var gridPos: Vector3i
+
 @export var characterGridSize: GridSize = GridSize.One
 
-var components : Array[CharacterComponent]
+var components: Array[CharacterComponent]
+
 
 func _ready() -> void:
-	return
+	initComponents()
 
 func initComponents():
 	var childNodes = get_children()

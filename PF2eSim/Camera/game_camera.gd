@@ -1,3 +1,4 @@
+class_name GameCamera
 extends Marker3D
 
 @export var defaultMoveSpeed: float = 1.0
@@ -33,6 +34,11 @@ func _physics_process(delta: float) -> void:
 	MoveCamera(delta, moveInput.normalized(), zoomInput)
 
 
+func _input(event: InputEvent) -> void:
+	if Input.is_action_just_pressed("LMB"):
+		getMouseWorldPos(event)
+
+
 func initCameraTransform():
 	var currentLevel = AdventureManager.currentAdventureSceneNode as AdventureLevel
 	position = currentLevel.startingLocation.position
@@ -48,3 +54,16 @@ func MoveCamera(delta: float, moveInput: Vector3, zoomInput: int):
 
 	var springArmMove = zoomInput * defaultMoveSpeed * delta
 	springArm.spring_length = clampf(springArm.spring_length + springArmMove, heightLimits.x, heightLimits.y)
+
+
+func getMouseWorldPos(event: InputEvent):
+	var mousePos = get_viewport().get_mouse_position()
+	var rayLength = 100
+	var from = camera.project_ray_origin(mousePos)
+	var to = from + camera.project_ray_normal(mousePos) * rayLength
+	var space = get_world_3d().direct_space_state
+	var rayQuery = PhysicsRayQueryParameters3D.new()
+	rayQuery.from = from
+	rayQuery.to = to
+	var result = space.intersect_ray(rayQuery)
+	print(result)

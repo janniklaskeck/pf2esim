@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://bd13ebwrhgkdg"]
+
+[ext_resource type="Script" uid="uid://chk2qvdd0c3uv" path="res://PF2eSim/Core/Navigation/navigation_manager.gd" id="1_240s5"]
+[ext_resource type="Resource" uid="uid://ds1rp8tsv1hrv" path="res://PF2eSim/Core/Navigation/grid_config.tres" id="2_pfivd"]
+
+[node name="NavigationManager" type="Node"]
+script = ExtResource("1_240s5")
+gridConfig = ExtResource("2_pfivd")
+debug = true
