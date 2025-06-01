@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="MeshLibraryEntryData" load_steps=2 format=3 uid="uid://cjs2b0incqil5"]
+
+[ext_resource type="Script" uid="uid://s1daurg1ekx1" path="res://PF2eSim/Assets/MeshLibraries/MetaData/mesh_library_entry_data.gd" id="1_yp432"]
+
+[resource]
+script = ExtResource("1_yp432")
+navWeight = 1
+metadata/_custom_type_script = "uid://s1daurg1ekx1"

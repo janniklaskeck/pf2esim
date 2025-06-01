@@ -1,2 +1,2 @@
-class_name human_default
+class_name HumanDefault
 extends Character

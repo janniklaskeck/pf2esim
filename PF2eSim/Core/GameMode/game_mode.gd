@@ -1,20 +1,37 @@
 class_name GameMode
 extends Node
 
-var gameCamera: GameCamera = null
+enum PlayMode
+{
+	Encounter = 0,
+	Exploration,
+	Downtime,
+}
+
+var adventureLevel: AdventureLevel
+
+signal onCharacterPartyChanged(wasAdded, character)
+var characterParty: Array[Character]
+
+var gameStarted: bool = false
 
 func _ready() -> void:
-	gameCamera = get_tree().get_first_node_in_group("Camera")
+	assert(adventureLevel)
+
+	var timer: Timer = Timer.new()
+	add_child(timer)
+	timer.wait_time = 1.0
+	timer.one_shot = true
+	timer.timeout.connect(startGame)
+	timer.start()
+
+func _process(delta: float) -> void:
+	pass
+
+func startGame():
+	gameStarted = true
+	spawnParty()
 
 
-func traceWorld():
-	var camera3D: Camera3D = gameCamera.camera
-
-	var mousePos = get_viewport().get_mouse_position()
-	var rayLength = 100
-	var from = camera3D.project_ray_origin(mousePos)
-	var to = from + camera3D.project_ray_normal(mousePos) * rayLength
-	var space = camera3D.get_world_3d().get_direct_space_state()
-	var rayQuery = PhysicsRayQueryParameters3D.create(from, to)
-	var result = space.intersect_ray(rayQuery)
-	return result
+func spawnParty():
+	pass

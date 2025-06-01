@@ -8,6 +8,7 @@ extends Marker3D
 @onready var camera: Camera3D = $SpringArm3D/Camera3D
 @onready var springArm: SpringArm3D = $SpringArm3D
 
+var adventureLevel: AdventureLevel = null
 
 func _ready() -> void:
 	initCameraTransform()
@@ -40,8 +41,7 @@ func _input(event: InputEvent) -> void:
 
 
 func initCameraTransform():
-	var currentLevel = AdventureManager.currentAdventureSceneNode as AdventureLevel
-	position = currentLevel.startingLocation.position
+	position = adventureLevel.partySpawnLocations[0].position
 
 	position.y = 3.0 # todo fix collisions
 	rotation_degrees.x = -defaultPitchAngle
@@ -66,4 +66,4 @@ func getMouseWorldPos(event: InputEvent):
 	rayQuery.from = from
 	rayQuery.to = to
 	var result = space.intersect_ray(rayQuery)
-	print(result)
+	#print(result)

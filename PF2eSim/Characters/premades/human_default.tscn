@@ -5,8 +5,11 @@
 [ext_resource type="PackedScene" uid="uid://wo6w2qt5leh6" path="res://PF2eSim/Characters/components/Humanoids/humanoid_mesh.tscn" id="3_mikvc"]
 [ext_resource type="PackedScene" uid="uid://bfilb455y165n" path="res://PF2eSim/Characters/components/Gameplay/Movement/movement_component.tscn" id="5_lxm1d"]
 
-[node name="HumanDefault" type="Node3D"]
+[node name="HumanDefault" type="Node3D" node_paths=PackedStringArray("collisionComponent", "meshComponent", "movementComponent")]
 script = ExtResource("1_kmbo1")
+collisionComponent = NodePath("HumanoidCollision")
+meshComponent = NodePath("HumanoidMesh")
+movementComponent = NodePath("MovementComponent")
 metadata/_custom_type_script = "uid://dt62313d0u8ae"
 
 [node name="HumanoidCollision" parent="." instance=ExtResource("2_f2v2t")]
@@ -14,3 +17,4 @@ metadata/_custom_type_script = "uid://dt62313d0u8ae"
 [node name="HumanoidMesh" parent="." instance=ExtResource("3_mikvc")]
 
 [node name="MovementComponent" parent="." instance=ExtResource("5_lxm1d")]
+moveSpeed = 5.0

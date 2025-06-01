@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://bcy4joh6a6qlc"]
+
+[ext_resource type="Script" uid="uid://ciks06ucnycy4" path="res://PF2eSim/UI/HUD/TurnTracker/turn_tracker_entry.gd" id="1_3rwxr"]
+[ext_resource type="Texture2D" uid="uid://snk3gewlrx7l" path="res://icon.svg" id="2_crewf"]
+
+[node name="TurnTrackerEntry" type="MarginContainer"]
+offset_right = 128.0
+offset_bottom = 155.0
+script = ExtResource("1_3rwxr")
+
+[node name="AspectRatioContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="CharacterPortrait" type="TextureRect" parent="AspectRatioContainer"]
+layout_mode = 2
+texture = ExtResource("2_crewf")
+
+[node name="CharacterName" type="Label" parent="AspectRatioContainer"]
+layout_mode = 2
+text = "_Character_"
+horizontal_alignment = 1

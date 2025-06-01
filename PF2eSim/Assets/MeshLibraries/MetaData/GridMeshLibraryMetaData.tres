@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="GridMeshLibraryMetaData" load_steps=5 format=3 uid="uid://gv7nhh4hkb67"]
+
+[ext_resource type="Script" uid="uid://s1daurg1ekx1" path="res://PF2eSim/Assets/MeshLibraries/MetaData/mesh_library_entry_data.gd" id="1_j6hl2"]
+[ext_resource type="Script" uid="uid://8cxaockdjkek" path="res://PF2eSim/Assets/MeshLibraries/MetaData/grid_mesh_library_meta_data.gd" id="1_opmoa"]
+[ext_resource type="Resource" uid="uid://dsdg2fp03y12d" path="res://PF2eSim/Assets/MeshLibraries/MetaData/CutStone_Floor.tres" id="2_4cll7"]
+[ext_resource type="Resource" uid="uid://cjs2b0incqil5" path="res://PF2eSim/Assets/MeshLibraries/MetaData/CutStone_Wall_Low.tres" id="3_c4cbd"]
+
+[resource]
+script = ExtResource("1_opmoa")
+metaData = Dictionary[String, ExtResource("1_j6hl2")]({
+"CutStoneFloor": ExtResource("2_4cll7"),
+"CutStoneWallLow": ExtResource("3_c4cbd")
+})
+metadata/_custom_type_script = "uid://8cxaockdjkek"

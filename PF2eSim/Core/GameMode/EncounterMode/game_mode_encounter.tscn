@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://banorboolgaqe"]
+
+[ext_resource type="Script" uid="uid://b6yym5f00w3xb" path="res://PF2eSim/Core/GameMode/EncounterMode/game_mode_encounter.gd" id="1_xlj0m"]
+[ext_resource type="PackedScene" uid="uid://du3o0pbvrr0dr" path="res://PF2eSim/Characters/premades/human_default.tscn" id="2_li5px"]
+
+[node name="EncounterMode" type="Node"]
+script = ExtResource("1_xlj0m")
+debugCharacterScene = ExtResource("2_li5px")

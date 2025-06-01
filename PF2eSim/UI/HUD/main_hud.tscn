@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://cvkhff83umhho"]
+
+[ext_resource type="Script" uid="uid://cts7fih2i1mvj" path="res://PF2eSim/UI/HUD/main_hud.gd" id="1_l7ttb"]
+[ext_resource type="PackedScene" uid="uid://msvanr2gp4lt" path="res://PF2eSim/UI/HUD/TurnTracker/turn_tracker.tscn" id="2_csh5i"]
+[ext_resource type="PackedScene" uid="uid://cnsvast2g01xy" path="res://PF2eSim/UI/HUD/Debug/debug_window.tscn" id="3_vrlnf"]
+
+[node name="MainHud" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_l7ttb")
+
+[node name="TurnTracker" parent="." instance=ExtResource("2_csh5i")]
+layout_mode = 1
+
+[node name="DebugWindow" parent="." instance=ExtResource("3_vrlnf")]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_bottom = 0.0
+offset_left = -280.0
+offset_right = -280.0
+grow_horizontal = 0
+grow_vertical = 1

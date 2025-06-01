@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://b08tj1f80j4lr"]
+[gd_scene load_steps=3 format=3 uid="uid://b08tj1f80j4lr"]
 
 [ext_resource type="Script" uid="uid://cuxt4kldrl5qs" path="res://PF2eSim/Core/Input/input_manager.gd" id="1_pghkk"]
+[ext_resource type="PackedScene" uid="uid://dth37e6rcbp6i" path="res://PF2eSim/Core/Input/EncounterInput/encounter_input_mode.tscn" id="2_rsnmo"]
 
 [node name="InputManager" type="Node"]
 script = ExtResource("1_pghkk")
+encounterInputMode = ExtResource("2_rsnmo")

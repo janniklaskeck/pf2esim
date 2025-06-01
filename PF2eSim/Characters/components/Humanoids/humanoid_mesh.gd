@@ -1,4 +1,4 @@
-class_name humanoid
+class_name HumanoidMesh
 extends CharacterComponent
 
 @onready var meshInstance: MeshInstance3D = $MeshInstance3D

@@ -3,22 +3,26 @@ extends Node
 
 @export var gridConfig: GridConfig
 
-@export var debug: bool = false
+var gridMap: GridMapBase
 
 
-func _process(delta: float) -> void:
-	if debug:
-		var origin = Vector3(0, gridConfig.groundHeight, 0)
-		var xSize = Vector3(gridConfig.gridSize * 64, 0, 0)
-		var ySize = Vector3(0, 0, gridConfig.gridSize * 64)
-		DebugDraw3D.draw_grid(origin, xSize, ySize, Vector2i(64, 64), Color.LIGHT_CORAL)
+func setGridMap(inGridMap: GridMapBase):
+	gridMap = inGridMap
 
 
 func findPath(startPos: Vector3i, endPos: Vector3i) -> Array[Vector3i]:
 	var path: Array[Vector3i] = []
 
+	var navGrid: AStarGrid2D = gridMap.navGrid
+	if not navGrid.is_in_bounds(startPos.x, startPos.z) or not navGrid.is_in_bounds(endPos.x, endPos.z):
+		print("error")
+		return []
+
+	var pathIds = navGrid.get_id_path(Vector2i(startPos.x, startPos.z), Vector2i(endPos.x, endPos.z), true)
+	for p in pathIds:
+		path.append(Vector3i(p.x, 0, p.y))
 	# TODO implement actual path finding
-	path = [endPos]
+	#path = [endPos]
 
 	return path
 
@@ -37,7 +41,6 @@ func worldToGrid(worldLocation: Vector3):
 
 
 func gridToWorld(gridLocation: Vector3i):
-
 	var gridX: float = gridLocation.x * gridConfig.gridSize
 	var gridY: float = gridLocation.y * gridConfig.floorHeight
 	var gridZ: float = gridLocation.z * gridConfig.gridSize

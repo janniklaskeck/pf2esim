@@ -22,6 +22,12 @@ AdventureManager="*res://PF2eSim/Core/adventure_manager.tscn"
 SceneManager="*res://PF2eSim/Core/scene_manager.tscn"
 NavigationManager="*res://PF2eSim/Core/Navigation/NavigationManager.tscn"
 InputManager="*res://PF2eSim/Core/Input/input_manager.tscn"
+Utils="*res://PF2eSim/Core/Utils/utils.gd"
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
 
 [editor]
 
@@ -30,13 +36,16 @@ version_control/autoload_on_startup=true
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/kanban_tasks/plugin.cfg", "res://addons/simple_gdscript_formatter/plugin.cfg")
+enabled=PackedStringArray("res://addons/create_actor/plugin.cfg", "res://addons/kanban_tasks/plugin.cfg", "res://addons/simple_gdscript_formatter/plugin.cfg")
 
 [global_group]
 
 Camera=""
 Characters=""
 PlayerCharacters=""
+PartySpawnLocations=""
+GameMode=""
+AdventureLevel=""
 
 [input]
 

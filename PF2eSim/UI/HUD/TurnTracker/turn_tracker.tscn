@@ -1,0 +1,43 @@
+[gd_scene load_steps=2 format=3 uid="uid://msvanr2gp4lt"]
+
+[ext_resource type="Script" uid="uid://cj6fe0jcwjpj1" path="res://PF2eSim/UI/HUD/TurnTracker/turn_tracker.gd" id="1_wskkk"]
+
+[node name="TurnTracker" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wskkk")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 31.0
+grow_horizontal = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ColorRect" type="ColorRect" parent="HBoxContainer/MarginContainer"]
+layout_mode = 2
+color = Color(0.0392157, 0.0392157, 0.0392157, 0.266667)
+
+[node name="ScrollContainer" type="ScrollContainer" parent="HBoxContainer/MarginContainer"]
+layout_mode = 2
+horizontal_scroll_mode = 4
+vertical_scroll_mode = 0
+
+[node name="EntryList" type="HBoxContainer" parent="HBoxContainer/MarginContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 1
+
+[node name="EndTurnButton" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "End Turn"
